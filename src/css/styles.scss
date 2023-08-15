@@ -329,7 +329,7 @@ img {
 // Отзывы
 .review-section {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 140px;
 }
 
 .image-review {
@@ -345,7 +345,8 @@ img {
 .review {
     position: relative;
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    align-items: end;
 }
 
 .review-carusel {
@@ -378,4 +379,12 @@ img {
 
 .date-review {
     color: $text-grey;
+}
+
+.btn-icon-list {
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+    padding-top: 40px;
+    padding-right: 110px;
 }
