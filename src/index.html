@@ -1,55 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <!-- Обнуляем стили браузера -->
-    <link rel="stylesheet" href="./css/reset.css" />
+        <!-- Обнуляем стили браузера -->
+        <link rel="stylesheet" href="./css/reset.css" />
 
-    <!-- Подключаем стили -->
-    <link rel="stylesheet" href="./css/styles.css" />
+        <!-- Подключаем стили -->
+        <!-- <link rel="stylesheet" href="styles.scss" /> -->
+        <link rel="stylesheet" href="./css/styles.scss" />
+
+        <!-- Шрифт Montserrat для заголовков -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Шрифт Ubuntu для текста -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Иконки -->
+        <script
+            src="https://kit.fontawesome.com/9d86f44a3a.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <title>Отзывы на туры</title>
+    </head>
+    <body>
+        <section class="review-section container">
+            <h1>Отзывы наших путешественников</h1>
+            <div class="review">
+                <img
+                    class="image-review position-image-review"
+                    src="/src/images/review-image.png"
+                    alt="фото отзыва"
+                />
+                <div class="review-carusel left-alignment">
+                    <div class="review-list">
+                        <div class="review-item">
+                            <p id="title-review" class="title-review">
+                                Отзыв о туре “Толбачинское кольцо”
+                            </p>
+                            <p id="description-review" class="description-review">
+                                Разнообразный и богатый опыт реализация намеченных плановых заданий играет важную роль в формировании систем массового участия. С другой стороны рамки и место обучения кадров требуют от нас анализа систем массового участия. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития. Таким образом укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития.
+                            </p>
+                            <div class="flex-line cntr-object author-review">
+                                <img id="author-foto" src="/src/images/review-author.png" alt="">
+                                <div class="flex-column indent-left20">
+                                    <p class="author-name" id="author-name">
+                                        Янковская Ольга
+                                    </p>
+                                    <p class="date-review" id="date-review">
+                                        20.05.2023
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
 
     <!-- js скрипт -->
     <script type="module" src="script.js"></script>
-
-    <!-- Шрифт Montserrat для заголовков -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Шрифт Ubuntu для текста -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Иконки -->
-    <script
-      src="https://kit.fontawesome.com/9d86f44a3a.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <title>Отзывы на туры</title>
-  </head>
-<body>
-<section>
-<h1>Отзывы наших путешественников</h1>
-<div class="review">
-<img
-    class="image-review position-image-review"
-    src="/src/images/review-image.png"
-    alt="фото отзыва"
-/>
-<div></div>
-</div>
-</section>
-  </body>
+    
 </html>
