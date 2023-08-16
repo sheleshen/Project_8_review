@@ -1,29 +1,28 @@
 // ТЕСТ!
-import './style.scss'
-import {carusel} from '/carusel.js'
+import Reviews from './reviews';
 
+// function App() {
+//     return (
+//         <div className='review-item'>
+//         <p className='title-review'>
+//             Отзыв о туре “{title}”
+//         </p>
+//         <p className='description-review'>
+//             {text}
+//         </p>
+//         <div className='flex-line cntr-object author-review'>
+//             <img src='/src/images/review-author.png' alt=''>
+//             <div className='flex-column indent-left20'>
+//                 <p className='author-name'>
+//                     {name}
+//                 </p>
+//                 <p className='date-review'>
+//                     {date}
+//                 </p>
+//             </div>
+//         </div>
+//     </div>
+//     );
+// };
 
-export default function App() {
-    return (
-        <div class="review-item">
-        <p id="title-review" class="title-review">
-            Отзыв о туре “${review.title}”
-        </p>
-        <p id="description-review" class="description-review">
-            ${review.text}
-        </p>
-        <div class="flex-line cntr-object author-review">
-            <img id="author-foto" src="/src/images/review-author.png" alt="">
-            <div class="flex-column indent-left20">
-                <p class="author-name" id="author-name">
-                    ${review.name}
-                </p>
-                <p class="date-review" id="date-review">
-                    ${review.date}
-                </p>
-            </div>
-        </div>
-    </div>
-
-    )
-}
+export default App;
