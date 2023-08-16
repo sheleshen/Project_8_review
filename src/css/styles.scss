@@ -2,19 +2,19 @@
 // MAIN
 $main-sand: #b68155;
 $main-sand-secondary: #b47754;
-$main-sand-dark: #65554C;
+$main-sand-dark: #65554c;
 
 $main-grey-blue: #c7c8cb;
-$main-grey: #6D7478;
-$main-grey-dark-blue: #63626D;
-$main-brown:#2B2523;
+$main-grey: #6d7478;
+$main-grey-dark-blue: #63626d;
+$main-brown: #2b2523;
 
 // Secondary MAIN
 $main-sand2: #b67e55;
 $main-sand3: #b57c55;
 $main-sand4: #b57954;
 
-$main-grey-sand:#c3b7b3;
+$main-grey-sand: #c3b7b3;
 $main-grey-sand: #bfa69b;
 $main-grey-sand: #bc9684;
 $main-grey-sand: #b8856c;
@@ -39,9 +39,8 @@ $bg-light3: #ebddd1;
 $bg-light4: #e4d1c1;
 $bg-light5: #dec6b2;
 
-
 // STROKE
-$str-grey: #F2F2F2;
+$str-grey: #f2f2f2;
 $str-dark-grey: #dbe5f0;
 // $str-dark-grey: #d5d6d8;
 
@@ -60,8 +59,8 @@ $text-brown-light5: #a5754d;
 $text-brown-light6: #b68155;
 $text-white: #ffffff;
 
-$text-grey-light: #A8A8A8;
-$text-grey: #6D7478;
+$text-grey-light: #a8a8a8;
+$text-grey: #6d7478;
 
 // GAPы
 $gap8: 8px;
@@ -76,7 +75,7 @@ $gap32: 32px;
 $btn-pr-bg: #062644;
 $btn-pr-t: #ffffff;
 
-$btn-pr-bgh: #3F7C9E;
+$btn-pr-bgh: #3f7c9e;
 $btn-pr-th: #ffffff;
 
 $btn-pr-bgcl: #285873;
@@ -86,12 +85,12 @@ $btn-pr-tcl: #ffffff;
 
 // Secondary
 $btn-sec-bg: #ebeff1;
-$btn-sec-t: #3F7C9E;
+$btn-sec-t: #3f7c9e;
 
-$btn-sec-bgh: #E3B5B5;
+$btn-sec-bgh: #e3b5b5;
 $btn-sec-th: #ffffff;
 
-$btn-sec-bgcl: #EB9898;
+$btn-sec-bgcl: #eb9898;
 $btn-sec-tcl: #ffffff;
 
 // Form
@@ -102,7 +101,15 @@ $form-text-lead-in: #363636;
 $form-error: #d84e4e;
 
 // ТЕКСТ И ССЫЛКИ
-a, ul, li, h1, h2, h3, h4, h5, h6 {
+a,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -126,7 +133,7 @@ p {
     border: none;
     border-radius: 30px;
     color: $btn-pr-t;
-    
+
     font-weight: 700;
     font-size: 18px;
     line-height: 140%;
@@ -134,7 +141,6 @@ p {
     text-align: center;
     padding: 18px 38px 17px 38px;
     cursor: pointer;
-
 
     &:hover {
         background-color: $btn-pr-bgh;
@@ -154,22 +160,22 @@ p {
 //     border: solid 1px $btn-add-str;
 //     border-radius: 30px;
 //     color: $btn-add-t;
-    
+
 //     font-weight: 700;
 //     font-size: 18px;
 //     line-height: 140%;
 
 //     text-align: center;
 //     padding: 17px 38px 16px 38px;
-//     cursor: pointer; 
-    
+//     cursor: pointer;
+
 //     &:hover {
 //         background-color: $btn-add-bgh;
 //         border: solid 1px $btn-add-strh;
 //         color: $btn-add-th;
 //         transition: all 300ms linear;
 //     }
-    
+
 //     &:active {
 //         background-color: $btn-add-bgcl;
 //         color: $btn-add-tcl;
@@ -184,21 +190,21 @@ p {
     border: none;
     border-radius: 30px;
     color: $btn-sec-t;
-    
+
     font-weight: 700;
     font-size: 18px;
     line-height: 140%;
 
     text-align: center;
     padding: 18px 38px 17px 38px;
-    cursor: pointer;  
+    cursor: pointer;
 
     &:hover {
         background-color: $btn-sec-bgh;
         color: $btn-sec-th;
         transition: all 300ms linear;
     }
-    
+
     &:active {
         background-color: $btn-sec-bgcl;
         color: $btn-pr-tcl;
@@ -232,11 +238,10 @@ p {
     padding: 7px 24px 9px 24px;
 }
 
-
-// ЗАГОЛОВКИ 
+// ЗАГОЛОВКИ
 h1 {
     // font-size: 100px;
-    
+
     font-style: normal;
     font-weight: 300;
     line-height: 110%; /* 110px */
@@ -273,11 +278,11 @@ h2 {
     @media (min-width: 600px) and (max-width: 768px) {
         max-width: calc(100% - 40px);
     }
-    
+
     @media (min-width: 768px) and (max-width: 1024px) {
         max-width: calc(100% - 40px);
     }
-    
+
     @media (min-width: 1024px) and (max-width: 1280px) {
         max-width: calc(100% - 20px);
     }
@@ -286,7 +291,7 @@ h2 {
 // ДРУГИЕ СВОЙСТВА
 .cntr-alignment {
     margin: 0px auto;
-    display: block
+    display: block;
 }
 
 // .right-alignment {
@@ -294,10 +299,9 @@ h2 {
 //     display: block
 // }
 
-// .left-alignment {
-//     margin-left: 0;
-//     display: block
-// }
+.left-alignment {
+    margin-left: 600px;
+}
 
 img {
     display: block;
@@ -317,7 +321,6 @@ img {
     align-items: center;
 }
 
-
 .indent-right20 {
     padding-right: 20px;
 }
@@ -329,7 +332,6 @@ img {
 // Отзывы
 .review-section {
     padding-top: 50px;
-    padding-bottom: 140px;
 }
 
 .image-review {
@@ -347,19 +349,27 @@ img {
     display: flex;
     flex-direction: column;
     align-items: end;
-}
 
-.review-carusel {
-    border-radius: 20px;
-    background: $bg-light;
-    max-height: 361px;
-
-    margin-top: 109px;
-    width: 50%;
+    padding-top: 150px;
+    padding-bottom: 122px;
 }
 
 .review-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 600px;
+
+    left: 0;
+    transition: all ease 1s;
+}
+
+.review-item {
     padding: 30px;
+    border-radius: 20px;
+    background: $bg-light;
+
+    min-width: 540px;
 }
 
 .title-review {
@@ -371,7 +381,6 @@ img {
     font-size: 16px;
     padding-bottom: 20px;
 }
-
 
 .author-name {
     padding-bottom: 4px;
@@ -387,4 +396,9 @@ img {
     gap: 40px;
     padding-top: 40px;
     padding-right: 110px;
+}
+
+.next-btn,
+.prev-btn {
+    cursor: pointer;
 }
