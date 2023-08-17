@@ -33,25 +33,34 @@ const reviews = [
 // переменная, где мы храним положение отзыва = индексу элемента в массиве
 let offsetReview = 0;
 
-// один отзыв из массива
-const {name, date, title, text} = review[index];
+// один отзыв из массива по индексу
+const {name, date, title, text} = people[index];
 
-// функция, чтобы отзывы появились на сайте
-function renderReviews() {
-    // Нужно получить данные для отображения отзыва индекс в массиве
+function renderReviews(index) {
+    // Сравнить номер индекса? через if/for перебор массива
+    // for (offsetReview < people.length; offsetReview++)
+
+      
+    // Для кнопки назад
     const goPrev = () => {
-        offsetReview = offsetReview + 1; // и как сместить отзыв
+        // передаем индекс и записываем в переменную offsetReview?
 
-        // нам надо передать номер отзыва
+        const newOffsetReview = offsetReview - 1; // переменную +1
+        return renderReviews(newOffsetReview); // возвращаем функцию
     }
 
+    // Для кнопки вперед
     const goNext = () => {
+        // передаем индекс и записываем в переменную offsetReview?
 
+        const newOffsetReview = offsetReview + 1; // переменную +1
+        return renderReviews(newOffsetReview); // возвращаем функцию
     }
 
-    // надо как-то сделать отзыв при клике +1 и -1?
-
-
+    // Идея для рандомного выбора
+    function getRandom(index) {
+        return Math.floor(Math.random() * people.lenght); // возвращаем случайное число от 0 до длины массива/отзыва (people.lenght или reviews.lenght)
+      }
 
     const reviewVisible = document.getElementById('containerReviews')
     reviewVisible.innerHTML += `
@@ -76,27 +85,3 @@ function renderReviews() {
             </div>
         `;
 }
-
-
-
-
-
-// //найти контейнер для отзывов
-// const containerReviews = document.getElementById('containerReviews');
-
-// // кнопка для перехода вперед
-// const btnPrev = document.getElementById('btn-prev');
-// btnPrev.addEventListener('click, goPrev');
-
-// // кнопка для перехода назад
-// const btnNext = document.getElementById('btn-next');
-// btnNext.addEventListener('click, goNext');
-
-
-// function goPrev() {
-//     offsetReview = offsetReview + 1;
-// }
-
-// function goNext() {
-//     console.log(1)
-// }
