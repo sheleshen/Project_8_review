@@ -17,10 +17,12 @@ function App() {
                         </div>
                     </div>
                     <div className="btn-icon-list">
-                        <div onClick={prevPerson} className="prev-btn">
+                        {/* <div onClick={prevPerson} className="prev-btn"> */}
+                            <div id="btn-prev" className="prev-btn">
                             <img src="/src/icons/left.png" alt="кнопка назад" />
                         </div>
-                        <div onClick={nextPerson} className="next-btn">
+                        <div id="btn-next" class="next-btn">
+                        {/* <div onClick={nextPerson} className="next-btn"> */}
                             <img
                                 src="/src/icons/right.png"
                                 alt="кнопка вперед"

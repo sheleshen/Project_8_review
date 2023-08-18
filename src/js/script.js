@@ -33,34 +33,18 @@ const reviews = [
 // переменная, где мы храним положение отзыва = индексу элемента в массиве
 let offsetReview = 0;
 
-// один отзыв из массива по индексу
-const {name, date, title, text} = people[index];
+// один отзыв из массива по индексу, н-р, people[0]={Янковская Ольга, ...}
+const {name, date, title, text} = people[index]; 
 
-function renderReviews(index) {
-    // Сравнить номер индекса? через if/for перебор массива
+function renderReviews() {
     // for (offsetReview < people.length; offsetReview++)
-
-      
-    // Для кнопки назад
-    const goPrev = () => {
-        // передаем индекс и записываем в переменную offsetReview?
-
-        const newOffsetReview = offsetReview - 1; // переменную +1
-        return renderReviews(newOffsetReview); // возвращаем функцию
+    // Сравнить номер индекса c длиной массива? через if/for перебор
+    if (offsetReview < people.length) {
+        return offsetReview;
     }
+    else {
 
-    // Для кнопки вперед
-    const goNext = () => {
-        // передаем индекс и записываем в переменную offsetReview?
-
-        const newOffsetReview = offsetReview + 1; // переменную +1
-        return renderReviews(newOffsetReview); // возвращаем функцию
     }
-
-    // Идея для рандомного выбора
-    function getRandom(index) {
-        return Math.floor(Math.random() * people.lenght); // возвращаем случайное число от 0 до длины массива/отзыва (people.lenght или reviews.lenght)
-      }
 
     const reviewVisible = document.getElementById('containerReviews')
     reviewVisible.innerHTML += `
@@ -85,3 +69,25 @@ function renderReviews(index) {
             </div>
         `;
 }
+
+
+// Для кнопки назад
+const goPrev = () => {
+    // передаем индекс и записываем в переменную offsetReview?
+    // надо придумать условие, чтобы потом писать offsetReview - 1
+    const newOffsetReview = offsetReview - 1; // переменную +1
+    return renderReviews(newOffsetReview); // возвращаем функцию
+}
+
+// Для кнопки вперед
+const goNext = () => {
+    // передаем индекс и записываем в переменную offsetReview?
+    // надо придумать условие, чтобы потом писать offsetReview + 1
+    const newOffsetReview = offsetReview + 1; // переменную +1
+    return renderReviews(newOffsetReview); // возвращаем функцию
+}
+
+// Идея для рандомного выбора
+function getRandom() {
+    return Math.floor(Math.random() * people.lenght); // возвращаем случайное число от 0 до длины массива/отзыва (people.lenght или reviews.lenght)
+  }
