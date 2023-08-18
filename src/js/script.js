@@ -36,14 +36,17 @@ let offsetReview = 0;
 // один отзыв из массива по индексу, н-р, people[0]={Янковская Ольга, ...}
 const {name, date, title, text} = people[index]; 
 
-function renderReviews() {
-    // for (offsetReview < people.length; offsetReview++)
-    // Сравнить номер индекса c длиной массива? через if/for перебор
-    if (offsetReview < people.length) {
-        return offsetReview;
-    }
-    else {
 
+function renderReviews() {
+    // Сравнить номер индекса c длиной массива? через if/for перебор
+    // for (offsetReview < people.length; offsetReview++)
+
+    // people.length = 4, offsetReview = 0 в моем примере
+    if (offsetReview < people.length) {
+        return 0; //offsetReview или 0, тогда вроде здесь будет всегда первый отзыв
+    }
+    if (offsetReview > people.length) {
+        
     }
 
     const reviewVisible = document.getElementById('containerReviews')
@@ -89,5 +92,7 @@ const goNext = () => {
 
 // Идея для рандомного выбора
 function getRandom() {
-    return Math.floor(Math.random() * people.lenght); // возвращаем случайное число от 0 до длины массива/отзыва (people.lenght или reviews.lenght)
+    const randomReview = Math.floor(Math.random() * people.lenght); // случайное число от 0 до длины массива/отзыва (people.lenght или reviews.lenght)
+    
+    renderReviews()
   }
