@@ -1,71 +1,70 @@
 // массив отзывов
 const reviews = [
     {
-        id: 1,
+        // id: 1, [0]
         name: 'Янковская Ольга',
+        image: '/src/images/review-author.png',
         date: '20.05.2023',
         title: 'Толбачинское кольцо',
         text: 'Разнообразный и богатый опыт реализация намеченных плановых заданий играет важную роль в формировании систем массового участия. С другой стороны рамки и место обучения кадров требуют от нас анализа систем массового участия. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития. Таким образом укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития.'
     },
     {
-        id: 2,
+        // id: 2, [1]
         name: 'Роо Ирина',
+        image: '/src/images/review-author.png',
         date: '21.06.2023',
         title: 'Тихоокеанское кольцо',
         text: 'Разнообразный и богатый опыт реализация намеченных плановых заданий играет важную роль в формировании систем массового участия. С другой стороны рамки и место обучения кадров требуют от нас анализа систем массового участия. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития. Таким образом укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития.'
     },
     {
-        id: 3,
+        // id: 3, [2]
         name: 'Шипина Елена',
+        image: '/src/images/review-author.png',
         date: '22.06.2023',
-        title: 'ОВулканы Камчатки',
+        title: 'Вулканы Камчатки',
         text: 'Разнообразный и богатый опыт реализация намеченных плановых заданий играет важную роль в формировании систем массового участия. С другой стороны рамки и место обучения кадров требуют от нас анализа систем массового участия. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития. Таким образом укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития.'
     },
     {
-        id: 4,
+        // id: 4, [3]
         name: 'Петров Михаил',
+        image: '/src/images/review-author.png',
         date: '10.07.2023',
         title: 'Знакомство с Камчаткой',
         text: 'Разнообразный и богатый опыт реализация намеченных плановых заданий играет важную роль в формировании систем массового участия. С другой стороны рамки и место обучения кадров требуют от нас анализа систем массового участия. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития. Таким образом укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития.'
     }
 ];
 
-// переменная, где мы храним положение отзыва = индексу элемента в массиве
-let offsetReview = 0;
+// индекс текущего отзыва, хочу показывать с [0]={Янковская Ольга, ...}
+let currentReviewIndex = 0;
 
-// один отзыв из массива по индексу, н-р, people[0]={Янковская Ольга, ...}
-const {name, date, title, text} = people[index]; 
+// Для кнопки назад
+const btnPrev = document.getElementById('btn-prev')
+btnPrev.addEventListener('click', goPrev)
 
+// Для кнопки вперед
+const btnNext = document.getElementById('btn-next')
+btnNext.addEventListener('click', goNext)
 
-function renderReviews() {
-    // Сравнить номер индекса c длиной массива? через if/for перебор
-    // for (offsetReview < people.length; offsetReview++)
-
-    // people.length = 4, offsetReview = 0 в моем примере
-    if (offsetReview < people.length) {
-        return 0; //offsetReview или 0, тогда вроде здесь будет всегда первый отзыв
-    }
-    if (offsetReview > people.length) {
-        
-    }
-
-    const reviewVisible = document.getElementById('containerReviews')
-    reviewVisible.innerHTML += `
+function renderReview() {
+    const reviewVisible = document.getElementById('containerReviews');
+    let review = reviews[currentReviewIndex];
+    
+    reviewVisible.innerHTML = `
             <div class="review-item">
-                <p id="title-review" class="title-review">
-                    Отзыв о туре “{title}”
+                <p class="title-review">
+                    Отзыв о туре “${review.title}”
                 </p>
-                <p id="description-review" class="description-review">
-                    {text}
+                <p class="description-review">
+                    ${review.text}
                 </p>
                 <div class="flex-line cntr-object author-review">
-                    <img id="author-foto" src="/src/images/review-author.png" alt="">
+                    <div class="foto"></div>
                     <div class="flex-column indent-left20">
-                        <p class="author-name" id="author-name">
-                            {name}
+                        <p class="author-name">
+                            ${review.name}
                         </p>
-                        <p class="date-review" id="date-review">
-                            {date}
+                        <p class="date-review">
+                            ${review.date}
                         </p>
                     </div>
                 </div>
@@ -73,26 +72,24 @@ function renderReviews() {
         `;
 }
 
+function goPrev() {
+    if (currentReviewIndex <= 0) { //0<= 0 да, тогда    2<=0? нет, тогда
+        currentReviewIndex = reviews.length - 1 //4-1=3 индекс/4 отзыв
+    } else {
+        currentReviewIndex = currentReviewIndex - 1 //2-1=1 индекс/2 отзыв
+    }
 
-// Для кнопки назад
-const goPrev = () => {
-    // передаем индекс и записываем в переменную offsetReview?
-    // надо придумать условие, чтобы потом писать offsetReview - 1
-    const newOffsetReview = offsetReview - 1; // переменную +1
-    return renderReviews(newOffsetReview); // возвращаем функцию
+    renderReview()
 }
 
-// Для кнопки вперед
-const goNext = () => {
-    // передаем индекс и записываем в переменную offsetReview?
-    // надо придумать условие, чтобы потом писать offsetReview + 1
-    const newOffsetReview = offsetReview + 1; // переменную +1
-    return renderReviews(newOffsetReview); // возвращаем функцию
+function goNext() {
+    if (currentReviewIndex >= reviews.length - 1) { //3>=3 да, тогда   3>=4? нет, тогда   
+        currentReviewIndex = reviews.length - reviews.length //4-4 = 0 индекс/1 отзыв
+    } else {
+        currentReviewIndex = currentReviewIndex + 1 //3+1=4 такого индекса нет, нужно изменить условие
+    }
+
+    renderReview()
 }
 
-// Идея для рандомного выбора
-function getRandom() {
-    const randomReview = Math.floor(Math.random() * people.lenght); // случайное число от 0 до длины массива/отзыва (people.lenght или reviews.lenght)
-    
-    renderReviews()
-  }
+renderReview()
