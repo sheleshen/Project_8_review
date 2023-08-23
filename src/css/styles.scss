@@ -72,26 +72,27 @@ $gap32: 32px;
 
 // BTN
 // Primary
-$btn-pr-bg: #062644;
+$btn-pr-bg: #b68155;
 $btn-pr-t: #ffffff;
 
-$btn-pr-bgh: #3f7c9e;
+$btn-pr-bgh: #B47454;
 $btn-pr-th: #ffffff;
 
-$btn-pr-bgcl: #285873;
+$btn-pr-bgcl: #b3663f;
 $btn-pr-tcl: #ffffff;
 
-// Add
-
 // Secondary
-$btn-sec-bg: #ebeff1;
-$btn-sec-t: #3f7c9e;
+$btn-sec-bg: #928B87;
+$btn-sec-t: #ffffff;
 
-$btn-sec-bgh: #e3b5b5;
+$btn-sec-bgh: #716B68;
 $btn-sec-th: #ffffff;
 
-$btn-sec-bgcl: #eb9898;
+$btn-sec-bgcl: #928B87;
 $btn-sec-tcl: #ffffff;
+
+$btn-sec-bgdes: #928B8700;
+$btn-sec-tdes: #928B87;
 
 // Form
 $form-bg: #ffffff;
@@ -128,18 +129,17 @@ p {
 
 // BTN КНОПКИ
 .btn {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: $btn-pr-bg;
     border: none;
-    border-radius: 30px;
+    border-radius: 4px;
     color: $btn-pr-t;
 
-    font-weight: 700;
+    font-weight: 400;
     font-size: 18px;
-    line-height: 140%;
+    line-height: 120%;
 
     text-align: center;
-    padding: 18px 38px 17px 38px;
     cursor: pointer;
 
     &:hover {
@@ -154,49 +154,18 @@ p {
     }
 }
 
-// .btn-add {
-//     font-family: 'Ubuntu', sans-serif;
-//     background-color: $btn-add-bg;
-//     border: solid 1px $btn-add-str;
-//     border-radius: 30px;
-//     color: $btn-add-t;
-
-//     font-weight: 700;
-//     font-size: 18px;
-//     line-height: 140%;
-
-//     text-align: center;
-//     padding: 17px 38px 16px 38px;
-//     cursor: pointer;
-
-//     &:hover {
-//         background-color: $btn-add-bgh;
-//         border: solid 1px $btn-add-strh;
-//         color: $btn-add-th;
-//         transition: all 300ms linear;
-//     }
-
-//     &:active {
-//         background-color: $btn-add-bgcl;
-//         color: $btn-add-tcl;
-//         border: solid 1px $btn-add-strcl;
-//         transition: all 200ms linear;
-//     }
-// }
-
 .btn-sec {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: $btn-sec-bg;
     border: none;
-    border-radius: 30px;
+    border-radius: 4px;
     color: $btn-sec-t;
 
-    font-weight: 700;
+    font-weight: 400;
     font-size: 18px;
-    line-height: 140%;
+    line-height: 120%;
 
     text-align: center;
-    padding: 18px 38px 17px 38px;
     cursor: pointer;
 
     &:hover {
@@ -220,7 +189,7 @@ p {
 
 .normal {
     font-size: 20px;
-    padding: 15px 32px 17px 32px;
+    padding: 16px 32px 16px 32px;
 }
 
 .medium {
@@ -251,6 +220,21 @@ h1 {
     // удалить, остальное раскомментить
     font-size: 70px;
     color: $text-black;
+    
+    @media (max-width: 600px) {
+        font-size: 40px;
+        // font-size: 70px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        font-size: 50px;
+        // font-size: 80px;
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 60px;
+        // font-size: 90px;
+    }
 }
 
 h2 {
@@ -263,6 +247,18 @@ h2 {
 
     padding-top: 80px;
     padding-bottom: 50px;
+
+    @media (max-width: 600px) {
+
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+    
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+    
+    }
 }
 
 // CONTAINER
@@ -322,11 +318,15 @@ img {
 }
 
 .indent-right20 {
-    padding-right: 20px;
+    margin-right: 20px;
 }
 
 .indent-left20 {
-    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.indent-bot20 {
+    margin-bottom: 60px;
 }
 
 // Отзывы
@@ -382,9 +382,9 @@ img {
     padding-bottom: 20px;
 }
 
-.foto {
-    width: 60px;
-    height: 60px;
+.author-foto {
+    min-width: 60px;
+    min-height: 60px;
     background-color: #b8a88a;
     border-radius: 30px;
 }
@@ -395,6 +395,7 @@ img {
 
 .date-review {
     color: $text-grey;
+    font-size: 15px;
 }
 
 .btn-icon-list {

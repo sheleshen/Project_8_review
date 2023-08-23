@@ -31,6 +31,22 @@ const reviews = [
         date: '10.07.2023',
         title: 'Знакомство с Камчаткой',
         text: 'Разнообразный и богатый опыт реализация намеченных плановых заданий играет важную роль в формировании систем массового участия. С другой стороны рамки и место обучения кадров требуют от нас анализа систем массового участия. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития. Таким образом укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития.'
+    },
+    {
+        // id: 5, [4]
+        name: 'Токарев Иван',
+        image: '/src/images/review-author.png',
+        date: '20.07.2023',
+        title: 'Вулканы Камчатки',
+        text: 'Разнообразный и богатый опыт реализация намеченных плановых заданий играет важную роль в формировании систем массового участия. С другой стороны рамки и место обучения кадров требуют от нас анализа систем массового участия. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития. Таким образом укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития.'
+    },
+    {
+        // id: 6, [5]
+        name: 'Кузьмина Алена',
+        image: '/src/images/review-author.png',
+        date: '23.08.2023',
+        title: 'Знакомство с Камчаткой',
+        text: 'Разнообразный и богатый опыт реализация намеченных плановых заданий играет важную роль в формировании систем массового участия. С другой стороны рамки и место обучения кадров требуют от нас анализа систем массового участия. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития. Таким образом укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития.'
     }
 ];
 
@@ -45,6 +61,10 @@ btnPrev.addEventListener('click', goPrev)
 const btnNext = document.getElementById('btn-next')
 btnNext.addEventListener('click', goNext)
 
+// Для кнопки рандомный отзыв
+const btnRandom = document.getElementById('review-random')
+btnRandom.addEventListener('click', getRandom)
+
 function renderReview() {
     const reviewVisible = document.getElementById('containerReviews');
     let review = reviews[currentReviewIndex];
@@ -58,8 +78,8 @@ function renderReview() {
                     ${review.text}
                 </p>
                 <div class="flex-line cntr-object author-review">
-                    <div class="foto"></div>
-                    <div class="flex-column indent-left20">
+                    <div class="author-foto indent-right20"></div>
+                    <div class="flex-column">
                         <p class="author-name">
                             ${review.name}
                         </p>
@@ -91,5 +111,15 @@ function goNext() {
 
     renderReview()
 }
+
+// Идея для рандомного выбора
+function getRandom() {
+    // случайное число от 0 до длины массива reviews.lenght = 4 не включительно
+    let currentRandomIndex = Math.floor(Math.random() * reviews.length);
+    currentReviewIndex = currentRandomIndex;
+
+    console.log(currentRandomIndex)
+    renderReview()
+  }
 
 renderReview()
