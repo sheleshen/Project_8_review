@@ -54,21 +54,21 @@ const reviews = [
 let currentReviewIndex = 0;
 
 // Для кнопки назад
-const btnPrev = document.getElementById('btn-prev')
-btnPrev.addEventListener('click', goPrev)
+const btnPrev = document.getElementById('btn-prev');
+btnPrev.addEventListener('click', goPrev);
 
 // Для кнопки вперед
-const btnNext = document.getElementById('btn-next')
-btnNext.addEventListener('click', goNext)
+const btnNext = document.getElementById('btn-next');
+btnNext.addEventListener('click', goNext);
 
 // Для кнопки рандомный отзыв
-const btnRandom = document.getElementById('review-random')
-btnRandom.addEventListener('click', getRandom)
+const btnRandom = document.getElementById('review-random');
+btnRandom.addEventListener('click', getRandom);
 
 function renderReview() {
     const reviewVisible = document.getElementById('containerReviews');
     let review = reviews[currentReviewIndex];
-    
+
     reviewVisible.innerHTML = `
             <div class="review-item">
                 <p class="title-review">
@@ -93,23 +93,25 @@ function renderReview() {
 }
 
 function goPrev() {
-    if (currentReviewIndex <= 0) { //0<= 0 да, тогда    2<=0? нет, тогда
-        currentReviewIndex = reviews.length - 1 //4-1=3 индекс/4 отзыв
+    if (currentReviewIndex <= 0) {
+        //0<= 0 да, тогда    2<=0? нет, тогда
+        currentReviewIndex = reviews.length - 1; //4-1=3 индекс/4 отзыв
     } else {
-        currentReviewIndex = currentReviewIndex - 1 //2-1=1 индекс/2 отзыв
+        currentReviewIndex = currentReviewIndex - 1; //2-1=1 индекс/2 отзыв
     }
 
-    renderReview()
+    renderReview();
 }
 
 function goNext() {
-    if (currentReviewIndex >= reviews.length - 1) { //3>=3 да, тогда   3>=4? нет, тогда   
-        currentReviewIndex = reviews.length - reviews.length //4-4 = 0 индекс/1 отзыв
+    if (currentReviewIndex >= reviews.length - 1) {
+        //3>=3 да, тогда   3>=4? нет, тогда
+        currentReviewIndex = reviews.length - reviews.length; //4-4 = 0 индекс/1 отзыв
     } else {
-        currentReviewIndex = currentReviewIndex + 1 //3+1=4 такого индекса нет, нужно изменить условие
+        currentReviewIndex = currentReviewIndex + 1; //3+1=4 такого индекса нет, нужно изменить условие
     }
 
-    renderReview()
+    renderReview();
 }
 
 // Идея для рандомного выбора
@@ -118,8 +120,8 @@ function getRandom() {
     let currentRandomIndex = Math.floor(Math.random() * reviews.length);
     currentReviewIndex = currentRandomIndex;
 
-    console.log(currentRandomIndex)
-    renderReview()
-  }
+    console.log(currentRandomIndex);
+    renderReview();
+}
 
-renderReview()
+renderReview();
