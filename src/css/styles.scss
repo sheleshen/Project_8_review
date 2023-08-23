@@ -125,6 +125,14 @@ p {
     line-height: 140%;
     color: $text-black;
     font-family: 'Nunito', sans-serif;
+
+    @media (max-width: 600px) {
+        font-size: 16px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        font-size: 17px;
+    }
 }
 
 // BTN КНОПКИ
@@ -184,27 +192,77 @@ p {
 // РАЗМЕРЫ КНОПОК - normal по умолчанию
 .large {
     font-size: 20px;
-    padding: 19px 32px 21px 32px;
+    padding: 20px 32px 20px 32px;
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+        padding: 13px 20px 11px 20px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        font-size: 14px;
+        padding: 13px 22px 15px 22px;
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 16px;
+        padding: 16px 26px 16px 26px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 20px;
+        padding: 16px 28px 16px 28px;
+    }
 }
 
 .normal {
     font-size: 20px;
-    padding: 16px 32px 16px 32px;
+    padding: 16px 28px 16px 28px;
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+        padding: 13px 20px 11px 20px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        font-size: 14px;
+        padding: 13px 22px 15px 22px;
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 16px;
+        padding: 16px 26px 16px 26px;
+    }
 }
 
 .medium {
     font-size: 16px;
-    padding: 14px 32px 15px 32px;
+    padding: 16px 26px 16px 26px;
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+        padding: 13px 20px 11px 20px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        font-size: 14px;
+        padding: 13px 22px 15px 22px;
+    }
 }
 
 .small {
     font-size: 14px;
-    padding: 13px 24px 11px 24px;
+    padding: 13px 22px 15px 22px;
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+        padding: 13px 20px 11px 20px;
+    }
 }
 
 .extrasmall {
     font-size: 14px;
-    padding: 7px 24px 9px 24px;
+    padding: 13px 20px 11px 20px;
 }
 
 // ЗАГОЛОВКИ
@@ -220,19 +278,32 @@ h1 {
     // удалить, остальное раскомментить
     font-size: 70px;
     color: $text-black;
+
+    @media (max-width: 350px) {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    @media (min-width: 330px) and (max-width: 400px) {
+        font-size: 24px;
+        text-align: center;
+        // font-size: 70px;
+    }
     
-    @media (max-width: 600px) {
-        font-size: 40px;
+    @media (min-width: 400px) and (max-width: 600px) {
+        font-size: 30px;
+        text-align: center;
         // font-size: 70px;
     }
     
     @media (min-width: 600px) and (max-width: 768px) {
-        font-size: 50px;
+        text-align: center;
+        font-size: 46px;
         // font-size: 80px;
     }
     
     @media (min-width: 768px) and (max-width: 1024px) {
-        font-size: 60px;
+        font-size: 56px;
         // font-size: 90px;
     }
 }
@@ -247,18 +318,6 @@ h2 {
 
     padding-top: 80px;
     padding-bottom: 50px;
-
-    @media (max-width: 600px) {
-
-    }
-    
-    @media (min-width: 600px) and (max-width: 768px) {
-    
-    }
-    
-    @media (min-width: 768px) and (max-width: 1024px) {
-    
-    }
 }
 
 // CONTAINER
@@ -295,10 +354,6 @@ h2 {
 //     display: block
 // }
 
-.left-alignment {
-    margin-left: 600px;
-}
-
 img {
     display: block;
 }
@@ -319,22 +374,67 @@ img {
 
 .indent-right20 {
     margin-right: 20px;
+
+    @media (max-width: 600px) {
+        margin-right: 14px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        margin-right: 18px;
+    }
 }
 
 .indent-left20 {
     margin-left: 20px;
+
+    @media (max-width: 600px) {
+        margin-left: 14px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        margin-left: 18px;
+    }
 }
 
 .indent-bot20 {
     margin-bottom: 60px;
+    
+    @media (max-width: 600px) {
+        
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+    
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+    
+    }
+    
+    @media (min-width: 1024px) and (max-width: 1280px) {
+    
+    }
 }
 
 // Отзывы
 .review-section {
     padding-top: 50px;
+
+    @media (max-width: 600px) {
+        padding-top: 30px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        padding-top: 30px;
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+        padding-top: 40px;
+    }
 }
 
 .image-review {
+    display: block;
     margin-top: 40px;
     border-radius: 60px;
     position: absolute;
@@ -342,6 +442,18 @@ img {
     top: 0;
     left: 0;
     z-index: -1;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+
+    @media (min-width: 600px) and (max-width: 768px) {
+        display: none;
+    }
+    
+    @media (min-width: 600px) and (max-width: 930px) {
+        width: 100%;
+    }
 }
 
 .review {
@@ -351,7 +463,35 @@ img {
     align-items: end;
 
     padding-top: 150px;
-    padding-bottom: 122px;
+    padding-bottom: 120px;
+
+    @media (max-width: 600px) {
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    @media (min-width: 768px) and (max-width: 900px) {
+        align-items: center;
+        padding-top: 110px;
+        padding-bottom: 80px;
+    }
+
+    @media (min-width: 850px) and (max-width: 900px) {
+        padding-bottom: 100px;
+    }
+
+    @media (min-width: 900px) and (max-width: 1024px) {
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 .review-list {
@@ -359,9 +499,18 @@ img {
     flex-wrap: nowrap;
     overflow: hidden;
     width: 600px;
+    padding-bottom: 20px;
 
     left: 0;
     transition: all ease 1s;
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .review-item {
@@ -369,17 +518,36 @@ img {
     border-radius: 20px;
     background: $bg-light;
 
-    min-width: 540px;
+    @media (max-width: 600px) {
+        box-shadow: 0px 10px 10px $main-grey-blue;
+    }
+
+    @media (min-width: 600px) and (max-width: 768px) {
+        box-shadow: 0px 10px 10px $main-grey-blue;
+    }
+    
 }
 
 .title-review {
     font-weight: 600;
     padding-bottom: 20px;
+
+    @media (max-width: 600px) {
+        padding-bottom: 15px;
+    }
 }
 
 .description-review {
     font-size: 16px;
     padding-bottom: 20px;
+
+    @media (max-width: 600px) {
+        font-size: 15px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        font-size: 15px;
+    }
 }
 
 .author-foto {
@@ -387,6 +555,16 @@ img {
     min-height: 60px;
     background-color: #b8a88a;
     border-radius: 30px;
+
+    @media (max-width: 600px) {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        min-width: 50px;
+        min-height: 50px;
+    }
 }
 
 .author-name {
@@ -404,9 +582,34 @@ img {
     gap: 40px;
     padding-top: 40px;
     padding-right: 110px;
+
+    @media (max-width: 600px) {
+        justify-content: center;
+        padding-right: 0px;
+        padding-top: 20px;
+    }
+    
+    @media (min-width: 600px) and (max-width: 768px) {
+        justify-content: center;
+        padding-right: 0px;
+        padding-top: 20px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        justify-content: center;
+        padding-right: 0px;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
 }
 
 .next-btn,
 .prev-btn {
     cursor: pointer;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 20px;
+    }
 }
